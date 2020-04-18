@@ -1,0 +1,14 @@
+name: docker build
+description: builds a docker image
+inputs:
+  repository:
+    description: name of the docker repository
+    required: true
+  tag:
+    description: tag to use for docker image
+    required: true
+    default: latest
+
+runs:
+  using: node12
+  main: dist/index.js
